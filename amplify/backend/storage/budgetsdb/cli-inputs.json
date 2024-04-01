@@ -1,0 +1,14 @@
+{
+  "resourceName": "budgetsdb",
+  "tableName": "budgetsdb",
+  "partitionKey": {
+    "fieldName": "userId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "creationDateBudgetId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

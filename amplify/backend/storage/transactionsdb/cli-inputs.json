@@ -1,0 +1,14 @@
+{
+  "resourceName": "transactionsdb",
+  "tableName": "transactionsdb",
+  "partitionKey": {
+    "fieldName": "userId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "creationDateTransactionId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

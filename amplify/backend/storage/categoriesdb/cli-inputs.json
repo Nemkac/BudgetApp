@@ -1,0 +1,14 @@
+{
+  "resourceName": "categoriesdb",
+  "tableName": "categoriesdb",
+  "partitionKey": {
+    "fieldName": "userId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "categoryId",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

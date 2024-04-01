@@ -1,0 +1,12 @@
+[
+  {
+    "Action": [
+      "dynamodb:Query",
+      "dynamodb:PutItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/budgetsdb-dev",
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/budgetsdb-dev/index/*"
+    ]
+  }
+]
