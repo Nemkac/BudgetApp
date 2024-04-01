@@ -1,0 +1,174 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-budgetmanager-dev-21750-authRole",
+      "UnauthRoleArn": "arn:aws:iam::597028766537:role/amplify-budgetmanager-dev-21750-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::597028766537:role/amplify-budgetmanager-dev-21750-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-budgetmanager-dev-21750-deployment",
+      "UnauthRoleName": "amplify-budgetmanager-dev-21750-unauthRole",
+      "StackName": "amplify-budgetmanager-dev-21750",
+      "StackId": "arn:aws:cloudformation:eu-north-1:597028766537:stack/amplify-budgetmanager-dev-21750/1b2328d0-97c3-11ee-8663-0af71353fcf2",
+      "AmplifyAppId": "d1sqtru5tbkjti",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-budgetmanager-dev-21750-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    }
+  },
+  "api": {
+    "budgetmanager": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "budgetsfunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "categoriesfunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "transactionsfunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "budgetmanager7cac7e1c": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [
+          "FACEBOOK"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "budgetrepeaterscheduler": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "budgetsdb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "budgetsfunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "budgetsdb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "categoriesfunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "categoriesdb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "categoriesinitialize": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "transactionsfunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "transactionsdb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "storage": {
+    "budgetsdb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "categoriesdb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "transactionsdb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

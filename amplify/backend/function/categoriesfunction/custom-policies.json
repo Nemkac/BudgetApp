@@ -1,0 +1,14 @@
+[
+  {
+    "Action": [
+      "dynamodb:Query",
+      "dynamodb:BatchWriteItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/budgetsdb-dev/index/*",
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/transactionsdb-dev/index/*",
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/budgetsdb-dev",
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/transactionsdb-dev"
+    ]
+  }
+]

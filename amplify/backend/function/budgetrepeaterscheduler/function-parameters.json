@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "budgetsdb": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

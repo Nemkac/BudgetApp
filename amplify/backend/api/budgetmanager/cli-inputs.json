@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "paths": {
+    "/budgets": {
+      "name": "/budgets",
+      "lambdaFunction": "budgetsfunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/categories": {
+      "name": "/categories",
+      "lambdaFunction": "categoriesfunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/transactions": {
+      "name": "/transactions",
+      "lambdaFunction": "transactionsfunction",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

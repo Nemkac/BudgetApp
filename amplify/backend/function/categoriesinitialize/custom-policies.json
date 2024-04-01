@@ -1,0 +1,10 @@
+[
+  {
+    "Action": [
+      "dynamodb:BatchWriteItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-north-1:597028766537:table/categoriesdb-dev"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "643188389116",
+    "project_id": "cut-budget-489c3",
+    "storage_bucket": "cut-budget-489c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643188389116:android:ce7edf1950dfb22c6e9379",
+        "android_client_info": {
+          "package_name": "app.cutbudget.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwAudAixSD80Qis5MtQUP2KXHNuIFWtNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

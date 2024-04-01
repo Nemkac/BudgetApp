@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-budgetmanager-dev-21750-authRole",
+      "UnauthRoleArn": "arn:aws:iam::597028766537:role/amplify-budgetmanager-dev-21750-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::597028766537:role/amplify-budgetmanager-dev-21750-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-budgetmanager-dev-21750-deployment",
+      "UnauthRoleName": "amplify-budgetmanager-dev-21750-unauthRole",
+      "StackName": "amplify-budgetmanager-dev-21750",
+      "StackId": "arn:aws:cloudformation:eu-north-1:597028766537:stack/amplify-budgetmanager-dev-21750/1b2328d0-97c3-11ee-8663-0af71353fcf2",
+      "AmplifyAppId": "d1sqtru5tbkjti",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-budgetmanager-dev-21750-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "budgetmanager7cac7e1c": {}
+      },
+      "function": {
+        "budgetrepeaterscheduler": {
+          "deploymentBucketName": "amplify-budgetmanager-dev-21750-deployment",
+          "s3Key": "amplify-builds/budgetrepeaterscheduler-7536677644527453336d-build.zip"
+        },
+        "budgetsfunction": {
+          "deploymentBucketName": "amplify-budgetmanager-dev-21750-deployment",
+          "s3Key": "amplify-builds/budgetsfunction-724c50336f533242766e-build.zip"
+        },
+        "categoriesfunction": {},
+        "categoriesinitialize": {},
+        "transactionsfunction": {
+          "deploymentBucketName": "amplify-budgetmanager-dev-21750-deployment",
+          "s3Key": "amplify-builds/transactionsfunction-44706853426632544f75-build.zip"
+        }
+      },
+      "storage": {
+        "budgetsdb": {},
+        "categoriesdb": {},
+        "transactionsdb": {}
+      }
+    }
+  }
+}
